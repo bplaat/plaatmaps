@@ -5,3 +5,4 @@ body{margin:0}html,body,#map{height:100%}svg{width:24px;height:24px}img,svg{disp
 #search-input{font:16px/1.5 "Helvetica Neue",Arial,Helvetica,sans-serif;z-index:8001;flex:1;width:240px;padding:8px 12px;border-radius:0;border-right:1px solid #ccc}
 #search-button{padding:8px;border-radius:0 4px 4px 0;background-color:#fff;cursor:pointer}
 #logo:hover,#logo:focus,#search-button:hover,#search-button:focus{background-color:#f4f4f4}
+#location-button{box-sizing:border-box;padding:3px}
