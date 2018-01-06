@@ -6,3 +6,7 @@ body{margin:0}html,body,#map{height:100%}svg{width:24px;height:24px}img,svg{disp
 #search-button{padding:8px;border-radius:0 4px 4px 0;background-color:#fff;cursor:pointer}
 #logo:hover,#logo:focus,#search-button:hover,#search-button:focus{background-color:#f4f4f4}
 #location-button{box-sizing:border-box;padding:3px}
+.is-loading{pointer-events:none}.is-loading>.search-icon{display:none}.is-loading>.spinner{display:block}
+@keyframes rotate{100%{transform:rotate(360deg)}}
+.spinner{display:none;animation:rotate 1s linear infinite}
+.path{stroke-dasharray:32;stroke-dashoffset:0;stroke:#000}

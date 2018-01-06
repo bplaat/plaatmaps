@@ -56,6 +56,7 @@ searchForm.addEventListener('submit', function (event) {
     event.preventDefault();
     searchInput.blur();
     searchButton.blur();
+    searchButton.classList.add('is-loading');
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
         var data = JSON.parse(xhr.responseText)[0];
@@ -70,6 +71,7 @@ searchForm.addEventListener('submit', function (event) {
         } else {
             alert('Place not found!');
         }
+        searchButton.classList.remove('is-loading');
     };
     xhr.open('GET', 'https://nominatim.openstreetmap.org/search?q=' + encodeURIComponent(searchInput.value) + '&format=json&limit=1');
     xhr.send();
