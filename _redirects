@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://plaatmaps.netlify.com/* http://plaatmaps.ml/:splat 301!
