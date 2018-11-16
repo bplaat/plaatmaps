@@ -1,7 +1,7 @@
 var map = L.map('map'), marker;
 map.attributionControl.setPrefix('');
 map.zoomControl.setPosition('bottomright');
-L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 }).addTo(map);
 L.control.scale().addTo(map);
