@@ -37,13 +37,17 @@ if (window.location.hash !== '') {
 } else {
     var xhr = new XMLHttpRequest();
     xhr.onload = function () {
-        var data = JSON.parse(xhr.responseText);
-        map.setView([data.lat, data.lon], 13);
+        try {
+            var data = JSON.parse(xhr.responseText);
+            map.setView([data.lat, data.lon], 13);
+        } catch (e) {
+            map.setView([52.018, 4.708], 13);
+        }
     };
     xhr.onerror = function () {
         map.setView([52.018, 4.708], 13);
     };
-    xhr.open('GET', 'https://ip-api.com/json');
+    xhr.open('GET', 'http://ip-api.com/json');
     xhr.send();
 }
 
